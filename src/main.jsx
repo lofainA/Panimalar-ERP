@@ -13,6 +13,7 @@ import StudentLogin from "./pages/Student/StudentLogin/StudentLogin";
 import StudentDashboard from "./pages/Student/StudentDashboard/StudentDashboard";
 import Assignments from "./pages/Student/Assignments/Assignments";
 import StudyMaterials from "./pages/Student/StudyMaterials/StudyMaterials";
+import Notifications from "./pages/Student/Notifications/Notifications";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: "/study-materials",
     element: <StudyMaterials />,
+  },
+  {
+    path: "/notifications",
+    element: <Notifications />,
   },
 ]);
 

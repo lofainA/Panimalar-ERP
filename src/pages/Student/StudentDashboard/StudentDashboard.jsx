@@ -50,6 +50,29 @@ function StudentDashboard() {
                         ))}
                     </div>
                     <div class="d-flex gap-2 flex-1 flex-wrap" >
+                        <div className="assignments">
+                            <div class="list-group" style={{width: "23rem"}}>
+                                <div class="list-group-item list-group-item-action bg-body-secondary">
+                                    <div class="d-flex w-100 justify-content-between align-items-center">
+                                        <h4 class="p-2 mb-1">Pending Assignments</h4>
+                                        <a href="/assignments">
+                                            <img src="./src/assets/arrow-right-circle.svg" width="24"/>
+                                        </a>
+                                    </div>
+                                </div>
+                                {Object.entries(assignments).map(([key, value]) => (
+                                    <div class="list-group-item">
+                                        <ul class="list-group list-group-horizontal">
+                                            <li class="list-group-item bg-body-secondary">{ key }</li>
+                                            <li class="list-group-item">{ value }</li>
+                                        </ul>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <div>
+                            <ToDoList />
+                        </div>
                         <div className="timetable">
                             <div class="list-group" style={{width: "23rem"}}>
                                 <a href="#" class="list-group-item list-group-item-action bg-body-secondary">
@@ -67,29 +90,6 @@ function StudentDashboard() {
                                     </div>
                                 ))}
                             </div>
-                        </div>
-                        <div className="assignments">
-                            <div class="list-group" style={{width: "23rem"}}>
-                                <a href="#" class="list-group-item list-group-item-action bg-body-secondary">
-                                    <div class="d-flex w-100 justify-content-between align-items-center">
-                                        <h4 class="p-2 mb-1">Pending Assignments</h4>
-                                        <a href="/assignments">
-                                            <img src="./src/assets/arrow-right-circle.svg" width="24"/>
-                                        </a>
-                                    </div>
-                                </a>
-                                {Object.entries(assignments).map(([key, value]) => (
-                                    <div class="list-group-item">
-                                        <ul class="list-group list-group-horizontal">
-                                            <li class="list-group-item bg-body-secondary">{ key }</li>
-                                            <li class="list-group-item">{ value }</li>
-                                        </ul>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                        <div>
-                            <ToDoList />
                         </div>
                     </div>
                 </div>

@@ -6,48 +6,43 @@ function StudentSidebar(activePage) {
 
     const location = useLocation();
     const { hashname, path, search } = location;
-    const activePg = path
+    const activePg = location.pathname;
 
     useEffect(() => {
-        console.log(activePage)
-    }, [activePage]);
+        console.log(location)
+    }, [activePg]);
 
     return(
-        <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-secondary" style={{width: "210px", height: "100vh"}}>
+        <div class="d-flex flex-column flex-shrink-0 p-4 bg-body-secondary" style={{width: "218px", minHeight:"100vh"}}>
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
             <img src="src/assets/logo.png" class="bi pe-none me-2" width="40" />
             <span class="fs-4">Dashboard</span>
             </a>
             <hr/>
             <ul class="nav nav-pills flex-column mb-auto">
-            <li class={activePg === 'student-dashboard' ? "nav-item" : activePg}>
-                <a href="/student-dashboard" class={activePg === 'dashboard' ? "nav-link link-body-emphasis active" : "nav-link link-body-emphasis"}>
-                <img src="src/assets/SidebarIcons/house.svg" width="16" height="16"/>
-                Home
+            <li class={activePg === "/student-dashboard" ? "nav-item" : ""}>
+                <a href="/student-dashboard" class={activePg === '/student-dashboard' ? "nav-link active" : "nav-link link-body-emphasis"}>
+                <i class="bi bi-kanban"></i>
+                Dashboard
                 </a>
             </li>
-            <li class={activePage === 'assignments' ? "nav-item" : ""}>
-                <a href="/assignments" class={activePage === 'assignments' ? "nav-link link-body-emphasis active" : "nav-link link-body-emphasis"}>
-                <img src="src/assets/SidebarIcons/journal-text.svg" width="16" height="16"/>
+            <li class={activePg === '/assignments' ? "nav-item" : ""}>
+                <a href="/assignments" class={activePg === '/assignments' ? "nav-link active" : "nav-link link-body-emphasis"}>
+                <i class="bi bi-journal-text"></i>
                 Assignments
                 </a>
             </li>
-            <li>
-                <a href="/study-materials" class={activePage === "studyMats" ? "nav-link active" : "nav-link link-body-emphasis"}>
-                <img src="src/assets/SidebarIcons/book.svg" width="16" height="16"/>
+            <li class={activePg === '/study-materials' ? "nav-item" : ""}>
+                <a href="/study-materials" class={activePg === "/study-materials" ? "nav-link active" : "nav-link link-body-emphasis"}>
+                <i class="bi bi-book"></i>
                 Study Materials
                 </a>
             </li>
-            <li>
-                <a href="#" class={activePage === "exams" ? "nav-link active" : "nav-link link-body-emphasis"}>
-                <img src="src/assets/SidebarIcons/pencil.svg" width="16" height="16"/>
-                Exams
-                </a>
-            </li>
-            <li>
-                <a href="#" class={activePage === "social" ? "nav-link active" : "nav-link link-body-emphasis"}>
-                <img src="src/assets/SidebarIcons/chat-left-dots.svg" width="16" height="16"/>
-                Social
+            
+            <li class={activePg === '/notifications' ? "nav-item" : ""}>
+                <a href="/notifications" class={activePg === "/notifications" ? "nav-link active" : "nav-link link-body-emphasis"}>
+                <i class="bi bi-chat-left-dots"></i>
+                Notifications
                 </a>
             </li>
             </ul>
@@ -69,3 +64,10 @@ function StudentSidebar(activePage) {
 }
 
 export default StudentSidebar;
+
+/*<li>
+                <a href="/exams" class={activePage === "exams" ? "nav-link active" : "nav-link link-body-emphasis"}>
+                <i class="bi bi-pencil"></i>
+                Exams
+                </a>
+            </li>*/
