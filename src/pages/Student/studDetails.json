@@ -1,0 +1,10 @@
+{
+    "student": {
+        "FirstName": "Tom",
+        "LastName": "Holland",
+        "Department": "CSE",
+        "Batch": "2022-2026",
+        "Semester": 5,
+        "CGPA": 8.5
+    }
+}

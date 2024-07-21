@@ -45,7 +45,7 @@ function Assignments () {
                             <form onSubmit={handleAssignmentSubmission} class="d-flex flex-row w-75 align-items-center gap-2">
                                 <label for="formFile" class="form-label text-secondary p-0 m-0">Upload completed assignment</label>
                                 <input class=" form-control" type="file"/>
-                                <button type="submit" class="btn btn-success">Submit</button>
+                                <button type="submit" class="btn btn-success"><i class="bi bi-upload"/></button>
                             </form>
                         </div>
                     </div>
@@ -62,7 +62,7 @@ function Assignments () {
                             <form onSubmit={handleAssignmentSubmission} class="d-flex flex-row w-75 align-items-center gap-2">
                                 <label for="formFile" class="form-label text-secondary p-0 m-0">Upload completed assignment</label>
                                 <input class=" form-control" type="file"/>
-                                <button type="submit" class="btn btn-success">Submit</button>
+                                <button type="submit" class="btn btn-success"><i class="bi bi-upload"/></button>
                             </form>
                         </div>
                     </div>
@@ -79,7 +79,7 @@ function Assignments () {
                             <form onSubmit={handleAssignmentSubmission} class="d-flex flex-row w-75 align-items-center gap-2">
                                 <label for="formFile" class="form-label text-secondary p-0 m-0">Upload completed assignment</label>
                                 <input class=" form-control" type="file"/>
-                                <button type="submit" class="btn btn-success">Submit</button>
+                                <button type="submit" class="btn btn-success"><i class="bi bi-upload"/></button>
                             </form>
                         </div>
                     </div>

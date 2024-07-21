@@ -9,11 +9,16 @@ import "./index.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 import Welcome from "./pages/Welcome/Welcome";
+
 import StudentLogin from "./pages/Student/StudentLogin/StudentLogin";
+import FacultyLogin from "./pages/Faculty/FacultyLogin/FacultyLogin";
+
 import StudentDashboard from "./pages/Student/StudentDashboard/StudentDashboard";
 import Assignments from "./pages/Student/Assignments/Assignments";
 import StudyMaterials from "./pages/Student/StudyMaterials/StudyMaterials";
 import Notifications from "./pages/Student/Notifications/Notifications";
+
+import FacultyDashboard from "./pages/Faculty/FacultyDashboard/FacultyDashbaord";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/student-login",
     element: <StudentLogin />,
+  },
+  {
+    path: "/faculty-login",
+    element: <FacultyLogin />,
   },
   {
     path: "/student-dashboard",
@@ -39,6 +48,10 @@ const router = createBrowserRouter([
   {
     path: "/notifications",
     element: <Notifications />,
+  },
+  {
+    path: "/faculty-dashboard",
+    element: <FacultyDashboard />,
   },
 ]);
 

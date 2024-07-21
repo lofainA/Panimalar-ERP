@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 export default function ToDoList() {
 
-    const [tasks, setTasks] = useState(["Do laundry", "Mow the lawn"]);
+    const [tasks, setTasks] = useState(["Complete TOC HW", "Fill in the IDFC form"]);
     const [newTask, setNewTask] = useState("");
 
 

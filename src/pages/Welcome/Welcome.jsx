@@ -12,7 +12,9 @@ function Welcome() {
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                     <a href=""><button type="button" class="btn btn-primary">Admin</button></a>
                     <a href=""><button type="button" class="btn btn-success">HOD</button></a>
-                    <a href=""><button type="button" class="btn btn-danger">Faculty</button></a>
+                    <a href="/faculty-login">
+                        <button type="button" class="btn btn-danger">Faculty</button>
+                    </a>
                     <a href="/student-login">
                         <button type="button" class="btn btn-warning">Student</button>
                     </a>

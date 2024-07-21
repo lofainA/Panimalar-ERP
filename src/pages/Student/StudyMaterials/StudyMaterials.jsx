@@ -176,11 +176,11 @@ function StudyMaterials() {
             <StudentSidebar />
             <div class="d-flex flex-column p-4 w-100 h-100">
                 <div class="mx-4">
-                    <h2>{details.department} Semester {details.semester} Notes</h2>
+                    <h3>{details.department} Semester {details.semester} Notes</h3>
                     <hr/>
                 </div>  
                 <div class="px-4 d-flex flex-column" style={{gap:"1rem"}}>
-                    <div class="fs-2">Subjects</div>
+                    <div class="fs-4">Subjects</div>
                     <div class="btn-group" role="group" aria-label="Basic outlined example">
                         {subs.map(sub => (
                             <button type="button" class="btn btn-outline-secondary">
@@ -194,7 +194,7 @@ function StudyMaterials() {
                 {subs.map(sub => (
                     <div class="mx-4  d-flex flex-column gap-4 mt-5" id={sub.subject}>
                         <div style={{width:"fit-content"}}>
-                            <div class="fs-4 ">{sub.subject}</div>
+                            <div class="fs-4">{sub.subject}</div>
                             <hr class="p-0 m-1"/>
                         </div>
                         <div class="d-flex flex-wrap" style={{gap:"1.5rem"}}>

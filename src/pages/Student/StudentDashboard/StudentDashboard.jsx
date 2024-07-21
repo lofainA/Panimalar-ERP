@@ -6,9 +6,10 @@ import ToDoList from "../../../components/ToDoList/ToDoList";
 function StudentDashboard() {
 
     const studDetails = {
-        Name: "Tom Holland",
+        FirstName: "Tom",
+        LastName: "Holland",
         Department: "CSE",
-        Batch: "2022-2026",
+        Year: "2022-2026",
         Semester: 5,
         CGPA: 8.5,
     };
@@ -30,15 +31,15 @@ function StudentDashboard() {
         3: "Theory of Computation",
     }
 
-    const entries = Object.entries(studDetails).slice(1);
+    const entries = Object.entries(studDetails).slice(2);
 
     return(
         <div className="container">
-            <StudentSidebar activePage="dashboard"/>
+            <StudentSidebar />
             <div className="dashboard-page d-flex flex-wrap">
                 <div className="heading">
-                    <img src="src/assets/avatar.jpg" class="rounded-circle mx me-4 img-fluid" width="70" height="70" alt="profile picture"/>
-                    <div class="fs-1">{ studDetails.Name }</div>
+                    <img src="src/res/avatar.jpg" class="rounded-circle mx me-4 img-fluid" width="70" height="70" alt="profile picture"/>
+                    <div class="fs-1">{ studDetails.FirstName } {studDetails.LastName}</div>
                 </div>
                 <div className="body" class="d-flex flex-column gap-4 flex-wrap">
                     <div className="details" class="d-flex flex-wrap gap-3">
@@ -56,7 +57,7 @@ function StudentDashboard() {
                                     <div class="d-flex w-100 justify-content-between align-items-center">
                                         <h4 class="p-2 mb-1">Pending Assignments</h4>
                                         <a href="/assignments">
-                                            <img src="./src/assets/arrow-right-circle.svg" width="24"/>
+                                        <i class="bi bi-arrow-right-circle"></i>
                                         </a>
                                     </div>
                                 </div>
